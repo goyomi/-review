@@ -1,0 +1,39 @@
+/* 커맨드+ / 주석입니다 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+	color: red;
+	border: 5px solid pink;
+}
+
+/* border 상속받기 */
+h1 {
+    border: inherit 
+}
+
+/* color 브라우저 기본값 (글자색은 원래 상속되는 속성) */
+h2 {
+    color: initial;
+}
+
+/* color 자연값 (원래 상속되는 성격이므로 그대로 상속됨) */
+p {
+    color: unset;
+}
+
+/* rem 설정 */
+div{
+    font-size: 10px;
+}
+
+/* px vs em */
+.one {
+    font-size: 20px;
+}
+.two {
+    font-size: 2em;
+}
