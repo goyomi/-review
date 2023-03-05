@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>justify and break all</title>
+  <style>
+    .white {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      text-align: justify;
+      float: left;
+      margin-right: 10px;
+    }
+    /* 박스를 나란히 붙이고 싶을 때는 float 속성 */
+    .break{
+      width: 200px;
+      height: 200px;
+      background-color: plum;
+      text-align: justify;
+      word-break: break-all;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="white">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores deserunt unde commodi aut fugit quasi, iusto totam provident modi repellat eius velit veritatis voluptate voluptatum incidunt? Nihil, ratione officia.
+  </div>
+  <div class="break">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat maiores deserunt undecommodi aut fugit quasi, iusto totam provident modi repellat eius velit veritatisvoluptate voluptatum incidunt? Nihil, ratione officia.
+  </div>
+</body>
+</html>
