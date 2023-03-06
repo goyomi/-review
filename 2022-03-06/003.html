@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word break</title>
+    <style>
+      div{
+        width: 200px;
+        height: 200px;
+        float: left;
+        margin-right: 10px;
+      }
+      div[class^="ko"]{
+        background-color: gold;
+      }
+      div[class^="en"]{
+        background-color: silver;
+      }
+
+      .ko-nomal{
+        word-break: normal;
+      }
+      .ko-break-all{
+        word-break: break-all;
+      }
+      .ko-keep-all{
+        word-break: keep-all;
+      }
+
+      .en-nomal{
+        word-break: normal;
+      }
+      .en-break-all{
+        word-break: break-all;
+      }
+      .en-keep-all{
+        word-break: keep-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ko-normal">국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</div>
+    <div class="ko-break-all">국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</div>
+    <div class="ko-keep-all">국회에 제출된 법률안 기타의 의안은 회기중에 의결되지 못한 이유로 폐기되지 아니한다. 다만, 국회의원의 임기가 만료된 때에는 그러하지 아니하다. 농업생산성의 제고와 농지의 합리적인 이용을 위하거나 불가피한 사정으로 발생하는 농지의 임대차와 위탁경영은 법률이 정하는 바에 의하여 인정된다.</div>
+    <div class="en-nomal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid quam placeat laborum unde non suscipit aut eius quas vitae minima et deleniti, vel nesciunt ex. Quae explicabo soluta autem?</div>
+    <div class="en-break-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid quam placeat laborum unde non suscipit aut eius quas vitae minima et deleniti, vel nesciunt ex. Quae explicabo soluta autem?</div>
+    <div class="en-keep-all">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aliquid quam placeat laborum unde non suscipit aut eius quas vitae minima et deleniti, vel nesciunt ex. Quae explicabo soluta autem?</div>
+  </body>
+</html>
+
+
+  </body>
+</html>
