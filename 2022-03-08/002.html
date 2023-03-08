@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex로 레아웃 만들기</title>
+    <style>
+      *{
+  margin: 0;
+  padding: 0;
+}
+
+.wrap{
+  color: white;
+  font: 2em bold;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.wrap:nth-child(2){
+  flex-grow: 1;
+}
+.wrap:nth-child(3){
+  flex-grow: 2;
+}
+
+header{
+  width: 100%;
+  height: 150px;
+  background-color: skyblue;
+  flex-basis: 100%;
+}
+section{
+  width: 70%;
+  height: 450px;
+  background-color: darkblue;
+}
+aside{
+  width: 30%;
+  height: 450px;
+  background-color: yellowgreen;
+}
+footer{
+  width: 100%;
+  height: 150px;
+  background-color: palevioletred;
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>header</header>
+      <section>section</section>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

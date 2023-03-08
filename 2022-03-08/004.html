@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+      .wrap{
+        font-size: large;
+        font-weight: bolder;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        width: 300px;
+        background-color: bisque;
+        display: grid;
+        grid-template-areas: 
+        "one two three" 
+        "four five six" 
+        "seven eight nine";
+        gap: 5px;
+      }
+
+      .one{
+        background-color: royalblue;
+        grid-area: one;
+      }
+      .two{
+        background-color: gold;
+        grid-area: two;
+      }
+      .three{
+        background-color: orange;
+        grid-area: three;
+      }
+      .four{
+        background-color: rosybrown;
+        grid-area: four;
+      }
+      .five{
+        background-color: navy;
+        grid-area: five;
+      }
+      .six{
+        background-color: forestgreen;
+        grid-area: six;
+      }
+      .seven{
+        background-color: maroon;
+        grid-area: seven;
+      }
+      .eight{
+        background-color: lightseagreen;
+        grid-area: eight;
+      }
+      .nine{
+        background-color: coral;
+        grid-area: nine;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+      <div class="seven">7</div>
+      <div class="eight">8</div>
+      <div class="nine">9</div>
+    </div>
+
+  </body>
+</html>
