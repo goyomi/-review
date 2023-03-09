@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid로 만드는 card UI</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .card{
+        /* width: 288px;
+        height: 348px; */
+        border: 1px solid rgb(227, 227, 227);
+        border-radius: 8px;
+        box-shadow: 2px 2px 5px rgb(223, 222, 222);
+        /* margin: 46px 10px 53px 63px; */
+        overflow: hidden;
+      }
+      img{
+        width: 288px;
+        height: 196px;
+        /* border-radius: 8px 8px 0 0;
+        over flow hidden 으로 사용가능 */
+      }
+      .UI-title{
+        width: 200px;
+        height: 19px;
+        margin: 25px 72px 12px 16px;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19.2px;
+      }
+      .UI-content{
+        width: 256px;
+        height: 40px;
+        margin: 12px 16px 0px 16px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      button{
+        width: 40px;
+        height: 18px;
+        border-style: none;
+        background-color: white;
+        margin: 19px 12px 19px 22px;
+        font-weight: 700;
+        font-size: 14px;
+        text-decoration: underline;
+        /* position: absolute; 
+        왠만하면 포지션 속성은 쓰면 안됨!*/
+      }
+
+      .wrap{
+        margin: 10px;
+        display: grid;
+        gap: 32px 24px;
+        grid-template-columns: repeat(auto-fill, 288px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card-1 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-2 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-3 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-4 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-5 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-6 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+      <div class="card-7 card">
+        <img src="../2022-03-06/Figma-icon/thumbnail.png" alt="카드UI사진">
+        <p class="UI-title">그것을 피가 청춘을 것이다</p>
+        <p class="UI-content">청춘의 하였으며, 이것은 몸이 때문이다. 사는가 고동을 용기가 충분히 청춘 것이다. 얼마나 반짝이는 소담스...운 열락의 아름다우냐? 가지에 같지 청춘의 옷을 목숨을 피어나기 오직 군영과 칼이다. 거친 끓는 예가 뿐이다. 방지하는 꽃이 청춘을 생명을 이것이다. 인간의 거선의 피고, 모래뿐일 작고 우리 평화스러운 있는가?</p>
+        <button>Read</button>
+      </div>
+    </div>  
+      <!-- 테스트 할 때 글자를 작게도 넣어보고 많이도 넣어볼 것 -->
+  </body>
+</html>
