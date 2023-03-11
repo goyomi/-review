@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상클래스</title>
+    <style>
+      p{
+        margin: 0;
+        padding: 0;
+      }
+      .wrap :first-child{
+        background-color: peachpuff;
+      }
+      .wrap :last-child{
+        background-color: lemonchiffon;
+      }
+      .wrap :nth-child(2){
+        background-color: aquamarine;
+      }
+      .wrap div:nth-of-type(3){
+        background-color: green;
+      }
+      .wrap p:only-of-type{
+        background-color: palevioletred;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div><p>4</p></div>
+      <div>5</div>
+    </div>
+  </body>
+</html>
