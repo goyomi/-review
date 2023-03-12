@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+    <style>
+      div{
+        height: 100px;
+        border: 10px dashed navy;
+        padding: 20px;
+        text-align: center;
+        color: navy;
+        font-weight: bolder;
+        margin: 10px;
+      }
+
+      [class^="clip"],[class^="origin"]{
+        background-image: url(./FES-5th_zoom_background.png);
+      }
+      
+      .clip1{
+        background-clip: border-box;
+      }
+      .clip2{
+        background-clip: padding-box;
+      }
+      .clip3{
+        background-clip: content-box;
+      }
+
+      .origin1{
+        background-origin: border-box;
+      }
+      .origin2{
+        background-origin: padding-box;
+      }
+      .origin3{
+        background-origin: content-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clip1"><h1>border box</h1></div>
+    <div class="clip2"><h1>padding box</h1></div>
+    <div class="clip3"><h1>content box</h1></div>
+
+    <div class="origin1"><h1>border box</h1></div>
+    <div class="origin2"><h1>padding box</h1></div>
+    <div class="origin3"><h1>content box</h1></div>
+  </body>
+</html>

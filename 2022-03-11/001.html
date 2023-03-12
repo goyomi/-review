@@ -25,6 +25,9 @@
       .wrap p:only-of-type{
         background-color: palevioletred;
       }
+      .wrap div:not(p:only-of-type){
+        border: 2px solid navy;
+      }
     </style>
   </head>
   <body>
@@ -32,7 +35,7 @@
       <div>1</div>
       <div>2</div>
       <div>3</div>
-      <div><p>4</p></div>
+      <p>4</p>
       <div>5</div>
     </div>
   </body>
