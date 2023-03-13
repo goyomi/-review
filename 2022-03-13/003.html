@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+      .wrap{
+        display: inline-block;
+      }
+      .box{
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+      }
+      .a{
+        background-color: peachpuff;
+      }
+      .b{
+        background-color: plum;
+      }
+
+      .relative{
+        position: relative;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+      }
+      .absolute{
+        position: absolute;
+        left: 50px;
+        right: 50px;
+        bottom: 50px;
+      }
+      .fixed{
+        position: fixed;
+        left: 170px;
+        right: 170px;
+        bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box a">box</div>
+      <div class="static box b">static box</div>
+    </div>
+    <div class="wrap">
+      <div class="box a">box</div>
+      <div class="relative box b">relative box</div>
+    </div>
+    <div class="wrap">
+      <div class="box a">box</div>
+      <div class="absolute box b">absolute box</div>
+    </div>
+    <div class="wrap">
+      <div class="box a">box</div>
+      <div class="fixed box b">fixed box</div>
+    </div>
+  </body>
+</html>
