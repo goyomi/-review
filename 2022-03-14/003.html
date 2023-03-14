@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 창 만들기</title>
+    <style>
+      .log-in{
+        width: 392px;
+        margin: 0 auto;
+      }
+      .log-in label,
+      .log-in input,
+      .log-in button{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      .log-in input{
+        background-color: #fff;
+        border-bottom: 1px solid #677880;
+      }
+      .log-in button{
+        background-color: black;
+        border: 0;
+        border-radius: 2px;
+        color: white;
+        height: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="log-in">
+      <label for="user-email">이메일
+      <input id="user-email" type="email"></label>
+
+      <label for="user-password">비밀번호
+      <input id="user-password" type="password"></label>
+
+      <button type="submit">로그인</button>
+    </form>
+
+  </body>
+</html>

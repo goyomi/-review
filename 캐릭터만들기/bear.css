@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.gomdol{
+  width: 600px;
+  height: 600px;
+  border: 1px solid black;
+  margin: auto;
+  position: relative;
+}
+.gomdol .face{
+  width: 350px;
+  height: 300px;
+  border: 1px solid black;
+  background-color: #b18842;
+  border-radius: 100%;
+  margin: auto;
+  transform: translateY(50%);
+}
+
+.gomdol .ear{
+  width: 130px;
+  height: 100px;
+  border: 1px solid black;
+  background-color: #b18842;
+  border-radius: 100% 100% 0 0;
+  position: absolute;
+}
+.gomdol .ear.left{
+  transform: rotate(-45deg);
+  left: 80px;
+  top: 170px;
+}
+.gomdol .ear.right{
+  transform: rotate(45deg);
+  right: 80px;
+  top: 170px;
+}
+
+.face .eye{
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  background-color: black;
+  border-radius: 100%;
+  position: absolute;
+  top: 130px;
+}
+.face .eye.left{
+  left: 100px;
+}
+.face .eye.right{
+  right: 100px;
+}
+
+.face .nose.outside{
+  width: 110px;
+  height: 110px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  position: absolute;
+  top: 130px;
+  left: 120px;
+  background-color: white;
+}
+.face .nose.inside{
+  width: 40px;
+  height: 30px;
+  background-color: #3e2416;
+  border-radius: 90px 90px 10px 10px;
+  position: absolute;
+  top: 155px;
+  left: 155px;
+}
+
+.face .line.col{
+  width: 35px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  top: 195px;
+  left: 157px;
+  transform: rotate(90deg);
+}
+.face .line.row{
+  width: 80px;
+  height: 60px;
+  border-bottom: 10px solid #000;
+  border-radius: 70%;
+  position: absolute;
+  top: 148px;
+  left: 137px;
+}
+
+.face .cheek{
+  width: 80px;
+  height: 30px;
+  border-radius: 100%;
+  background-color: pink;
+  position: absolute;
+}
+
+.face .cheek.left{
+  left: 30px;
+  top: 180px;
+}
+
+.face .cheek.right{
+  right: 30px;
+  top: 180px;
+}
+
+/* .gomdol:hover{
+  width: 80px;
+  height: 60px;
+  border-bottom: 10px solid #000;
+  border-radius: -70%;
+  position: absolute;
+  top: 210px;
+  left: 137px;
+  transform: rotate(180deg);
+} */

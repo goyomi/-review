@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+      table{
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+      tr,th,td{
+        border: 1px solid;
+        width: 100px;
+      }
+      thead{
+        background-color: aquamarine;
+      }
+      tbody{
+        background-color: honeydew;
+      }
+      tfoot{
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table>(thead>(tr>td{hello}*8)*2)+(tbody>(tr>td{hello}*8)*3) -->
+    <table>
+      <thead>
+        <tr>
+          <th class="colspan" colspan="2">thead>tr>th colspan</th>
+          <th>thead>tr>th</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>tbody>tr>td</td>
+          <td>tbody>tr>td</td>
+          <td class="rowspan" rowspan="2">td rowspan</td>
+        </tr>
+        <tr>
+          <td>tbody>tr>td</td>
+          <td>tbody>tr>td</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>tfoot>tr>td</td>
+          <td>tfoot>tr>td</td>
+          <td>tfoot>tr>td</td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </body>
+</html>
