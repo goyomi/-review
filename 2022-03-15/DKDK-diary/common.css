@@ -1,0 +1,46 @@
+body {
+  background-color: #fffaf0;
+  margin: 0;
+}
+
+.header{
+  background-color: #fff;
+  height: 120px;
+}
+
+[class^="btn"] {
+  text-decoration: none;
+  display: inline;
+  padding: 1em 1em 1em 2.8em;
+  color: #5A6A72;
+  background-repeat: no-repeat;
+  background-size: 2em ;
+  background-position: 0.8em center;
+}
+
+.btn-join{
+  background-image: url(./img/icon-join.svg);
+}
+.btn-login{
+  background-image: url(./img/icon-login.svg);
+}
+.btn-logout{
+  background-image: url(./img/icon-logout.svg);
+}
+
+div ul{
+  float: right;
+  margin: 50px 10px;
+}
+ul li{
+  list-style: none;
+  float: left;
+}
+
+div .logo{
+  display: inline;
+  width: 156px;
+  height: 75px;
+  margin: 22px 0 23px 108px;
+  float: left;
+}
