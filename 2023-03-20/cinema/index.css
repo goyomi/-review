@@ -1,0 +1,94 @@
+h1, h2, h3,
+ul, li,
+p {
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3{
+  font-weight: initial;
+  font-size: initial;
+}
+button{
+  border: 0;
+  background-color: initial;
+}
+
+.cinema-container{
+  width: 1060px;
+  margin: 0 auto;
+  border: 2px solid rgb(195,195,195);
+  border-radius: 5px;
+}
+header .title{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  margin: 41px auto 37px;
+}
+header .bar{
+  width: 650px;
+  height: 2px;
+  background-color: #BDBDBD;
+}
+header ul{
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 28px auto;
+}
+header li{
+  list-style: none;
+  text-align: center;
+}
+header li a{
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #828282;
+}
+a:not(:disabled){
+  cursor: pointer;
+}
+
+header .cinema-wrap{
+  width: 1003px;
+  background-color: #FFF;
+  margin: auto;
+}
+header .cinema-wrap .card{
+  width: 220px;
+  height: 441px;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px #0000004D;
+}
+header .cinema-wrap .card img{
+  width: 180px;
+  height: 250px;
+  border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  margin: 19px 20px 0 20px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+header .cinema-wrap .card-button{
+  width: 220px;
+  height: 41px;
+  background-color: #F2F2F2;;
+  border: 1px solid #BDBDBD;
+}
+/* header .cinema-wrap .card-button .button{
+  padding: 10px;
+} */
+header .cinema-wrap .card-button .right{
+  background-image: url(../img/icon-play.svg);
+  background-repeat: no-repeat;
+}
+header .cinema-wrap .card-button p{
+  display: inline-block;
+}
+header .cinema-wrap .card-button .right p{
+  padding-left: 12px;
+}
