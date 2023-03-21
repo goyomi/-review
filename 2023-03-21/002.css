@@ -1,0 +1,23 @@
+/* reset */
+p{
+  padding: 0;
+  margin: 0;
+}
+h1,h2 {
+  margin: 0;
+}
+
+.notice-container{
+  width: 728px;
+}
+/* .notice-left{
+  display: flex;
+} */
+.notice.text{
+  display: flex;
+  
+}
+.notice.text div{
+  display: inline-block;
+  border-top: 1px solid #EEEEEE;
+}
