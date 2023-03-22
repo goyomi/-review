@@ -1,0 +1,41 @@
+/* *{
+  outline: 1px solid salmon;
+} */
+
+/* reset */
+body, h1, h2, p{
+  margin: 0;
+}
+h1,h2{
+  font-size: initial;
+  font-weight: initial;
+}
+button{
+  border: none;
+  background-color: initial;
+}
+a{
+  
+}
+
+.log-con{
+  width: 520px;
+  margin: auto;
+  border: 1px solid #C4C4C4
+}
+.log-con .title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin: 20px auto;
+  box-shadow: 1px 0 1px #C4C4C4;
+}
+
+.log-con .log-top{
+  width: 472px;
+  margin: 26px auto 38px;
+}
+.log-con .log-bottom{
+  width: 472px;
+}
