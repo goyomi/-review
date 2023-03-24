@@ -91,3 +91,4 @@
 .inp-hold:checked+.labl-hold::after {
   left: 1px;
   opacity: 1;
+}
