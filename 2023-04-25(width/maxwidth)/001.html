@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>width vs max-width</title>
+    <style>
+      .box.one{
+        width: 500px;
+        background-color: yellow;
+      }
+      .box.two{
+        max-width: 500px;
+        background-color: skyblue;
+        margin-bottom: 20px;
+      }
+      .box.three{
+        width: 50%;
+        background-color: salmon;
+      }
+      .box.four{
+        max-width: 50%;
+        background-color: honeydew;
+      }
+      .box-wrap{
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="box one">width
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. At delectus, explicabo temporibus nemo repudiandae voluptatibus, laborum quas qui corrupti est recusandae eaque voluptas? Totam eligendi aspernatur iusto quaerat, labore expedita!
+    </div>
+    <div class="box two">max-width
+      <br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ullam quod qui, explicabo ex incidunt minus cupiditate, assumenda amet quis, officia reiciendis eos quia. Velit cumque blanditiis reiciendis laboriosam veniam?
+    </div>
+    <div class="box-wrap">
+      <div class="box three">width
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. At delectus, explicabo temporibus nemo repudiandae voluptatibus, laborum quas qui corrupti est recusandae eaque voluptas? Totam eligendi aspernatur iusto quaerat, labore expedita!
+      </div>
+      <div class="box four">max-width
+        <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ullam quod qui, explicabo ex incidunt minus cupiditate, assumenda amet quis, officia reiciendis eos quia. Velit cumque blanditiis reiciendis laboriosam veniam?
+      </div>
+    </div>
+
+  </body>
+</html>
