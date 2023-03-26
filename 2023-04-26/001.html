@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인, 블록요소</title>
+    <style>
+      span{
+        box-shadow: 0 0 10px indianred inset;
+        display: flow-root;
+      }
+      div{
+        width: 200px;
+        height: 200px;
+        background-color: darksalmon;
+      }
+
+      .one{
+        display: inline;
+        background-color: darkcyan;
+      }
+      .two{
+        display: block;
+        background-color: darkorange;
+      }
+    </style>
+  </head>
+  <body>
+    <span>
+      span입니다
+      <div>div입니다</div>
+    </span>
+    <div class="one"> div입니다
+      <span class="two">span 입니다</span>
+    </div>
+  </body>
+</html>

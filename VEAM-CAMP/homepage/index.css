@@ -17,6 +17,10 @@ h1 {
 ul li{
   list-style: none;
 }
+img{
+  max-width: 100%;
+  vertical-align: top;
+}
 
 /* common */
 .cont_wrapper {
@@ -43,7 +47,6 @@ ul li{
 .card {
   width: 1080px;
   display: flex;
-  align-items: center;
   margin: 0 auto;
   box-shadow: 0 0 10px blue inset;
 }
@@ -76,11 +79,20 @@ ul li{
 }
 .card .card-cover {
   flex-basis: 26%;
-  flex-shrink: 0;
 }
 .card .card-contents {
   flex-grow: 1;
   padding: 24px;
   background-color: #fff;
 }
-.card-list 
+.card-list .list-title{
+  margin-bottom: 32px;
+}
+.card-list :not([class='list-title'])::before{
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bd8fe8;
+}
