@@ -1,0 +1,13 @@
+.one {
+  //내부에 변수 선언하는 것을 지역변수라고 한다
+  $value: red;
+  color: $value;
+  .three {
+    background-color: $value;
+  }
+}
+
+// 이것은 에러입니다.
+// .two {
+//   color: $value;
+// }

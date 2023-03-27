@@ -1,0 +1,20 @@
+.one {
+  font-size: 10px + 10px;
+}
+
+.two {
+  font-size: 30px - 10px;
+}
+
+.three {
+  font-size: 10px * 2;
+}
+
+//20px/ 10px하면 값이 2로 나옴 10으로 적어야 함
+.four {
+  font-size: (20px / 10);
+}
+
+.five {
+  font-size: 8px % 3;
+}

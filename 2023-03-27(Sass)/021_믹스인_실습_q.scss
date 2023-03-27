@@ -1,0 +1,24 @@
+@mixin center($derection) {
+  display: flex;
+  justify-content: $derection;
+  align-items: $derection;
+}
+@mixin box($length, $radius){
+  width: $length;
+  height: $length;
+  border-radius: $radius;
+}
+
+.card {
+  @include center(center);
+  background-color: red;
+}
+.card-item {
+  @include box(100px,10%)
+}
+.product {
+  @include center(right)
+}
+.product-item {
+  @include box(200px,25%)
+}

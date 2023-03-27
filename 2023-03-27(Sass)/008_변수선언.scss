@@ -1,0 +1,20 @@
+$mijung1: #000;
+$mijung2: #0ff;
+//한글 변수는 권장하지 않음.
+//고유 명사 같은 경우는 한글 변수를 사용할 수 있다.
+$미정: #f00;
+$큰글자: 34px;
+
+.one {
+  font-size: $큰글자;
+  color: $mijung2
+}
+
+.two {
+  background-color: $mijung2;
+  color: $mijung1;
+}
+
+.three {
+  color: $미정;
+}

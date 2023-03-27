@@ -1,0 +1,12 @@
+.one {
+  // 사용하는 것을 권장하지 않는다. 
+  $value: red; !global;
+  color: $value;
+  .three {
+    background-color: $value;
+  }
+}
+
+.two {
+  color: $value;
+}
