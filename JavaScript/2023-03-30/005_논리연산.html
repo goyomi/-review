@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산</title>
+  </head>
+  <body>
+    <script>
+      // 논리연산
+      const x = true; // 1
+      const y = false; // 0
+      const z = 10;
+      
+      console.log(x && y); // and(곱)
+      // and 는 둘 중 하나라도 f면 false이다. 둘다 t여야 ture
+      console.log(x || y); // or(합)
+      // or는 둘 중에서 하나라도 t라면 ture이다. 둘다 f여야 false.
+      console.log(!x);
+      console.log(!!z); // 부정에 부정을 하면 소수점을 없애준다.
+
+      //중요하진 않음
+      console.log(x && y);
+      console.log(x && y);
+
+      // 비트 연산자 중에서 유일하게 조금 중요한 연산(부정연산) 
+      // console.log(~3)
+      // console.log(~~3)
+      // console.log(~~3.14)
+      // console.log(parseInt(3.14)) 부정연산자 보다 조금 더 안전함
+
+      // console.log(parseInt(3.14))
+      // console.log(parseInt('3.14'))
+      // console.log(parseInt('3.14abc')) 
+      // parseInt만 되고 ~~부정은 안됨 
+    </script>
+
+  </body>
+</html>

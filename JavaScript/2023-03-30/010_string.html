@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+  </head>
+  <body>
+    <script>
+      let txt = 'abcdefghij'
+
+      // slice (시작인덱스, 종료인덱스) : 시작인덱스 부터 종료인덱스 -1번째 까지 반환한다. 
+      console.log(txt.slice(1,3)) // start, end(-1), 0부터 시작
+      console.log(txt.slice(1)) // start값만, 1번부터 끝까지
+      console.log(txt.slice(-1)) // j, 음수값도 지원한다 
+      console.log(txt.slice(3, 1)) // 이건 안됩니다
+
+      // substring (시작인덱스, 종료인덱스) : 시작인덱스부터 종료인덱스 -1번째 까지 반환한다. 
+      console.log(txt.substring(1, 3))
+      console.log(txt.substring(1))
+      console.log(txt.substring(-1)) // 마이너스 값을 0으로 인식함
+      console.log(txt.substring(3, 1)) // 여기서는 됨
+      // slice와의 차이가 있다.
+
+      let txt2 = 'paullab CEO leehojun CEO'
+      console.log(txt2.replace('CEO', 'COO')) // 제일 앞의 CEO만 바뀜
+      console.log(txt2.replace(/CEO/g, 'COO')) // 전체 다 바꿀려면 정규 표현식을 사용해야함
+      console.log(txt2.replaceAll('CEO', 'COO')) // 최신 문법, 지원안되는 곳도 있을 수 있음 참고해서 사용해야함 
+      // 21년도에 추가되었다
+
+      console.log(txt2.toLowerCase()) // 소문자로 모두 바꾸어줌
+      console.log(txt2.toUpperCase()) // 대문자로 모두 바꾸어줌
+
+      // 알고리즘 문제에 특히 많이 사용됨 (코딩테스트)
+      // '값'의 포함 여부에 따라 불리언으로 반환
+      console.log(txt2.includes('CEO')) 
+      console.log(txt2.includes('CDO'))
+
+      // 메서드 채이닝 (계속해서 바꾼다)
+      txt2.replace('CEO', 'CDO').includes('CDO').toString().toUpperCase()
+      // 1. paullab CDO leehojun CEO
+      // 2. CDO 포함하고 있으므로 true(불리언 값이 됨)
+      // 3. 불리언 true를 toString으로 'true'으로 변환함
+      // 4. 'ture'의 값을 toUpperCase로 대문자로 변환함
+      // 5. TURE
+
+      //어디서나 정말 많이 사용되는 메서드 입니다.
+      txt2.split(' ') // 띄어쓰기 단위로 잘라줌 
+      // '' 안띄우면 알파벳으로 잘라줌 
+
+      // ['aa', 'bb', 'cc', 'dd']로 바꿔보기
+      let text1 = 'aa bb cc dd' // text1.split(' ')
+      let text2 = 'aa-bb-cc-dd' // text2.split('-')
+      let text3 = 'aa,bb,cc,dd' // text3.split(',')
+      let text4 = 'aa,bb-cc,dd' // text4.split(/[,-]/g), 정규표현식
+      // or text4.replace(',''-').split('-') 
+
+      // 자주 사용되지 않지만, 이걸 몰라서 직접 구현하면 번거로운 메서드
+      // trim : 앞 뒤 공백을 없애줌
+      // 공백 없애는법
+      let test = '                  hello world'
+      console.log('                  hello world') 
+      test.replaceAll(' ','')
+      // 'helloworld' 값으로 반환되서 또 띄어쓰기를 해줘야함 
+      test.trim() 
+      // 간단하게 끝
+    </script>
+  </body>
+</html>
