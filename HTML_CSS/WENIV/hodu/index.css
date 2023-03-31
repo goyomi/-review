@@ -1,0 +1,23 @@
+/* reset */
+h1,h2,p {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+ul, li {
+  text-decoration: none;
+}
+img {
+  vertical-align: top;
+}
+button {
+  all: unset;
+}
+
+
+
+.hodu_container {
+  max-width: 1920px;
+  box-shadow: 0 0 10px inset red;
+}
+
