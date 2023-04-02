@@ -139,25 +139,54 @@ p {
 .hodu-cont.four p {
   flex-basis: 739px;
 }
-.hodu-cont.five {
-  min-width: 1280px;
-  flex-wrap: wrap;
+
+/* article */
+.hodu-ad {
+  max-width: 1280px;
+  margin: 0 auto;
   padding: 50px 58px;
-  background: #263140;
   border-radius: 30px;
+  background: #263140;
   color: white;
+  display: flex;
+  gap: 143px;
+  align-items: center;
 }
-.hodu-cont.five #five {
-  border: 30px;
-  background: white;
+.hodu-ad .ad-text {
+  flex-basis: 50%;
 }
-.hodu-cont.five::after {
+.hodu-ad .ad-text .ad-title {
+  margin-bottom: 18px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.hodu-ad .inp-email {
+  flex-basis: 50%;
+  position: relative;
+}
+.hodu-ad .inp-email input {
+  width: 530px;
+  padding: 20px 0 20px 68px;
+  background: #FFFFFF;
+  border-radius: 60px;
+}
+.hodu-ad .inp-email::after {
   content: '';
-  background: url(./hodu_img/img_5.jpg) no-repeat;
+  display: block;
+  width: 24px;
+  height: 24px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 28px;
+  background: url(./hodu_img/mail.svg) no-repeat;
 }
+.hodu-ad .button.ad {
+  position: absolute;
+  top: -15px;
+  right: 5px;
+}
+
 
 /* footer */
 .footer_wrapper {
