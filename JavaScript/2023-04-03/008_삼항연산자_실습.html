@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 3항 연산자 실습
+      // 통장에 10000원 초과 있으면 '부자'      
+      // 통장에 10000원 이하 있으면 '부를 바라는 자'
+
+      // const money = 7000
+      // const message = (money < 10000) ? "부자" : "부를 바라는자"
+      // console.log(message)
+
+      // 3항 연산자 실습2
+      // 통장에 10000원 초과해서 있으면 '초부자'
+      // 통장에 10000원 미만있으면 '부자'
+      // 통장에 10000원 이하 있으면 '부를 바라는 자'
+      
+      const money = 7000
+      const message = (money > 10000) ? "초부자" : ((money >= 10000) ? "부자" : "부를 바라는 자")
+      console.log(message)
+
+      // const price = 7500 // 이 값을 변경해보기
+      // const message = (price >= 9000) ? '비싸요' : ((price >= 7000) ? '적절해요' : 저렴해요)
+      // console.log(message)
+
+      // 드모르간 법칙
+      // 헷갈리는 연산 모음
+    </script>
+
+  </body>
+</html>

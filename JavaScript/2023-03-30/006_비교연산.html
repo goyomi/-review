@@ -16,13 +16,20 @@
       console.log(x < y);
       console.log(x <= y);
       console.log(x == y); // 변수의 type을 확인하지 않는다.
-      console.log(x === y); 
-      // 권장, 변수의 type을 확인한다.
-      // 권고하는 이유 
+      console.log(x === y); // 권장, 변수의 type을 확인한다.
+      // 권장하는 이유 
       // 1. 견고한 코딩 2. 성능상의 이슈
-      console.log(x != y); // not
-      console.log(x !== y);
-      //예시 (반대로 생각하기)
+      console.log(x != y); // t
+      console.log(x !== y); // t
+      // 예시 (반대로 생각하기)
+      // != 피연산자가 서로 같지 않으면 t : 서로 값이 다른가?
+      // !== 피연산자가 같지 않거나 자료형이 같지 않으면 t : 값이나 타입이 다른가?
+
+      const x2 = 3;
+      const y2 = '3';
+      console.log(x2 != y2); // f
+      console.log(x2 !== y2); // t
+
       console.log(3 != '3'); // flase
       console.log(3 !== '3'); // ture
     </script>

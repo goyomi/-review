@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // 단락회로평가 ***
+      // true : 1
+      // false : 0
+      // and(&&): 곱
+      // or(||) : 합
+      // not(!) : 부정
+
+      console.log(!"false") // false, false가 문자값
+      console.log(!"0") // false
+
+      console.log(!false) // ture
+      console.log(!0) // ture
+
+      console.log('abc' / 2) // NaN
+
+      console.log(!!NaN) // false
+      console.log(!!undefined) // false
+      console.log(!!null) // false
+
+      let username = "";
+      username = username || "이름을 입력하지 않으신분"
+      console.log(username)
+      // 이름을 입력하면 이름이, 아니면 "이름을 입력하지 않으신분"메세지 뜸
+      // ||(and) 연산자를 통해 뒷 값까지 보게함 
+
+      let username2 = "김미정";
+      username2 = username2 || "이름을 입력하지 않으신분"
+      console.log(username2)
+
+      // 3항 연산자
+      // 드모르간 법칙
+      // 헷갈리는 연산 모음
+    </script>
+
+  </body>
+</html>

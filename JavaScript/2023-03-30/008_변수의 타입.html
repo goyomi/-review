@@ -8,13 +8,15 @@
   </head>
   <body>
     <script>
-      // 원시타입 string, number, bigint, boolean, undefined
+      // 원시타입 string(문자형), number(숫자형), bigint(길이에 제약없이 정수를 다룰 수 있게 해주는 숫자형), boolean(논리형 t/f), undefined(자료형이 정의되지 않았을 때의 데이터 상태, 변수에 값이 할당되지 않았다 라는 의미)
+
         let str1 = 'hello';
         let str2 = str1;
         console.log(str2); // 'hello'
 
         str1 = 'world';
         console.log(str2); // str2에 할당된 값은 여전히 'hello' 입니다.
+        // let str2 = str1; 에서 str2가 가르킨 곳이 str1이 아니라 'hello'라는 값이기 때문이다. 
 
         // string
         console.log(typeof 'hello')
@@ -29,11 +31,11 @@
         //number
         console.log(typeof 10) // Int 정수
         console.log(typeof 10.1)  // float 실수
-        console.log(typeof NaN) // Not a Number
+        console.log(typeof NaN) // Not a Number: 잘못된 입력으로 인해 계산을 할 수 없는 상태를 말한다. 
 
         // undefined 정의되어있지 않음을 의미, 변수를 초기화 할때 사용 변수에 값이 없다는 것을 명시하고 싶다면 null 을 할당해야 한다. 
-        console.log(typeof undefined) 
-        let a; //변수에 아무것도 선언하지 않음
+        console.log(typeof undefined) //변수에 아무것도 선언하지 않음
+        let a; 
         console.log(a)
 
         // null(값이 비어있음을 명시적으로 나타냄)
@@ -53,10 +55,21 @@
         // function
         console.log(typeof function(){})
 
-        // object
+        // object(객체): 함수와 함께 속성을 포함한다.
         console.log(typeof [10, 20, 30]) // 배열
         console.log(typeof {a: 10, b:20}) // object
+        // a,b는 속성 10, 20은 속성값
         console.log(typeof /정규표현식/gi)
+        // 객체는 한꺼번에 담을 수 있는 통(container)과 같은 구조이다. 객체 안에는 이름-값(name-value pair)쌍이 저장되어있는데 이것을 객체의 속성(property)이라고 한다.
+        
+        let 사람 = {
+        '이름' : '조원영',
+        '나이': 25,
+        '성별': '여'
+        }
+        // 사람: 객체, 
+        // 이름, 나이, 성별 : 객체속성
+        // 값에 접근할 때: 사람['이름'] or 사람.이름
 
         // 형변환(number -> string, string -> number)
         console.log(parseInt('10')) // 권장
@@ -75,7 +88,7 @@
         // 형변환 (다른 type -> boolean)
         console.log(Boolean(-1)) // ture
         console.log(Boolean(0)) // false, 0만 false
-        console.log(Boolean(!!1000))
+        console.log(Boolean(!!1000)) // ture
     </script>
   </body>
 </html>
