@@ -8,7 +8,9 @@
   </head>
   <body>
     <script>
-      // 원시타입 string(문자형), number(숫자형), bigint(길이에 제약없이 정수를 다룰 수 있게 해주는 숫자형), boolean(논리형 t/f), undefined(자료형이 정의되지 않았을 때의 데이터 상태, 변수에 값이 할당되지 않았다 라는 의미)
+      // 자료형
+      // 원시(primitive) 자료형: number(숫자형), bigint(길이에 제약없이 정수를 다룰 수 있게 해주는 숫자형), string(문자형), boolean(논리형 t/f), null, undefined(자료형이 정의되지 않았을 때의 데이터 상태, 변수에 값이 할당되지 않았다 라는 의미), symbol
+
 
         let str1 = 'hello';
         let str2 = str1;
@@ -32,6 +34,17 @@
         console.log(typeof 10) // Int 정수
         console.log(typeof 10.1)  // float 실수
         console.log(typeof NaN) // Not a Number: 잘못된 입력으로 인해 계산을 할 수 없는 상태를 말한다. 
+
+              // 특수 숫자 값(special numeric value)
+        Infinity 
+        -Infinity, 
+        console.log(1/0)
+        // 어떤 숫자든지 0으로 나누면 무한대가 된다
+        NaN
+        // NaN은 계산 중에 에러가 발생했다는 것을 나타내주는 값
+        BigInt
+        // 자바스크립트에선 (2에53승-1)(9007199254740991) 보다 큰 값 혹은 -(2에53승-1) 보다 작은 정수는 '숫자형’을 사용해 나타낼 수 없습니다.길이에 상관없이 정수를 나타낼 수 있다. 정수 리터럴 끝에 n을 붙이면 된다. 인터넷 익스플로어에서는 호환이 안됨. 
+        // 리터럴(literal) :프로그램 언어에서 문자열 그 자체가 값을 나타내는 것
 
         // undefined 정의되어있지 않음을 의미, 변수를 초기화 할때 사용 변수에 값이 없다는 것을 명시하고 싶다면 null 을 할당해야 한다. 
         console.log(typeof undefined) //변수에 아무것도 선언하지 않음
