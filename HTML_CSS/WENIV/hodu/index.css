@@ -203,3 +203,23 @@ p {
 .footer_wrapper img {
   width: 226px;
 }
+
+.sns::before {
+  content: '';
+  display: block;
+  width: 42px; 
+  height: 42px;
+  background: url('./hodu_img/css_sprites.png') no-repeat 0 0 / 104px;
+}
+.blog::before {
+  background-position: -5px -5px
+}
+.insta::before {
+  background-position: -57px -6px;
+}
+.facebook::before {
+  background-position: -5px -57px;
+}
+.youtube::before {
+  background-position: -57px -57px;
+}

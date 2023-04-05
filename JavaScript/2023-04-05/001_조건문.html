@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+    <!-- 자바스크립트는 ? 조건을 선택할 수 있다 반복이 되고 있다 가 핵심!
+
+    조건문: 조건에 따라 실행되는 코드. 조건식이 T/F인 값을 반환하는 지에 따라 코드를 수행할지 말지 판단한다. -->
+
+    <script>
+    // if 문의 기본구조 예시
+
+    // let x = 3;
+    // let y = 7;
+    //     
+    // if(x == y){
+    //   document.write('if문으로 실행되었습니다.');
+    // } else{
+    //   document.write('else문으로 실행되었습니다.');
+    // }
+
+      //////////////////////
+
+      // 사용자로부터 입력받은 나이에 따라 다른 인사말을 콘솔로 출력하는 프로그램을 작성하세요. 
+      // 1. 나이가 18세 이상이면 "안녕하세요!"를
+      // 2. 10세 이상이면 "안녕! 반가워 꼬마친구! ” 를 
+      // 3. 10세 미만이면 “부럽다…” 를 출력합니다.
+
+      // let age = 20; 
+
+      // if (age >= 18) {
+      //   document.write('안녕하세요!');
+      // } else if (age >= 10){
+      //   document.write('안녕! 반가워 꼬마친구!');
+      // } else {
+      //   document.write('부럽다....');
+      // }
+      // document.wirte(age);
+      // const age = parseIntprompt('나이를 말씀해주세요') 프롬프트로 받을 수도있음. 받은 값은 모두 문자열로 처리되기 때문에 parseInt를 붙여주면 좀더 정확함. 
+      // 이상, 이하는 = 붙여주기. 초과, 미만과 다름
+
+      //////////////////////
+
+      // 사용자로부터 입력받은 성적에 따라 성적을 출력하는 프로그램을 작성하세요. 
+      // 1. 성적이 90점 이상이면 "A", 
+      // 2. 80점 이상이면 "B", 
+      // 3. 70점 이상이면 
+      // 4. "C", 60점 이상이면 "D", 
+      // 5. 그 외에는 “강해져서 돌아와라”를 출력합니다.
+
+      let score = parseInt(prompt('성적을 입력해주세요'));
+      
+      if (score >= 90){
+        document.write('A');
+      } else if (score >= 80){
+        document.write('B');
+      } else if (score >= 70){
+        document.write('C');
+      } else if (score >= 60){
+        document.write('D');
+      } else{
+        document.write('강해져서 돌아와라');
+      }
+
+    </script>
+  </body>
+</html>
+
