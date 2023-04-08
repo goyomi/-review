@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+
+        const a = document.querySelector('#a')
+        const b = document.querySelector('#b')
+
+        a.textContent = '<h1>textContent 속성</h1>'
+        // <h1>textContent 속성</h1>
+        // inerText속성은 익스플로러 9 이전의 브라우저에서 사용할 수 있는 속성(구), textContent는 최신
+        b.innerHTML = '<h1>innerHTML 속성</h1>'
+        // innerHTML 속성(h1 스타일적용됨)
+      })
+    </script>
+  </head>
+  <body>
+    <div id="a"></div>
+    <div id="b"></div>
+  </body>
+</html>
+
+<!-- querySelectorAll은 반복문이 들어가줘야 하고 문서객체의 여러 개를 읽어들일때만 사용할 수 있나요? -->
