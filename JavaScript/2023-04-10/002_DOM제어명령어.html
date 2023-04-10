@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 제어 명령어</title>
+    <style>
+      .blue{
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button>hello</button>
+
+    <script>
+      // 1. 이벤트삽입 target.addEventListener(type, listener)
+      // const myBtn = document.querySelector('button')
+
+      // myBtn.addEventListener('click', function() {
+      //   console.log('hello world')
+      // })
+
+      // 2. 클래스 제어 classList 객체를 통해 요소의 class 속성을 제어
+      const myBtn = document.querySelector('button')
+
+      myBtn.addEventListener('click', function() {
+        // myBtn.classList.add('blue')
+        // myBtn.classList.remove("blue")
+        // myBtn.classList.remove("blue")
+        console.log(myBtn.classList.contains("blue"))
+      })
+      // 버튼을 누르면 버튼에 blue라는 클래스가 붙음 
+      // myBtn.classList.remove("blue") 제거
+      // myBtn.classList.remove("blue") 없으면 넣어주고, 있으면 제거
+      // myBtn.classList.contains("blue") 해당하는 클래스가 있는지 확인, 불리언 값을 반환한다. 지금의 경우는 false반환 
+    </script>
+  </body>
+</html>

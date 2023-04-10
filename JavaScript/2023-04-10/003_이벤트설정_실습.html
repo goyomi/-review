@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 설정</title>
+    <style>
+      ul, li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: black;
+        margin: 10px auto;
+      }
+      ul {
+        display: flex;
+        justify-content: space-around;
+      }
+      .red {
+        background-color: red;
+      }
+      .yel {
+        background-color: yellow;
+      }
+      .gre {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <ul>
+      <li><button type="button" class="btn-red">빨강</button></li>
+      <li><button type="button" class="btn-yello">노랑</button></li>
+      <li><button type="button" class="btn-green">초록</button></li>
+    </ul>
+
+    <script>
+      const box = document.querySelector('.box')
+
+      box.addEventListener('click', function() {
+        box.classList.remove('red')
+      })
+    </script>
+  </body>
+</html>
