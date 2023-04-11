@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <figure>
+          <img src="" alt="잭필드">
+          <figcaption>
+            상품 가격 : 39,990원 <span class="hidden">(주의) VIP만 받을 수 있는 혜택입니다.</span>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+    <script>
+      const info = document.querySelector('figcaption');
+      console.log(info.textContent);
+      // 상품 가격 : 39,990원 (주의) VIP만 받을 수 있는 혜택입니다.
+      console.log(info.innerText)
+      // 상품 가격 : 39,990원
+      console.log(info.innerHTML)
+      // 상품 가격 : 39,990원 <span class="hidden">(주의) VIP만 받을 수 있는 혜택입니다.</span>
+
+      //innerText, innerHTML, textContent는 모두 요소의 콘텐츠를 가져오는 JavaScript 속성입니다. 하지만 세 속성의 차이점은 다음과 같습니다.
+
+      // - textContent: 요소의 모든 자식 요소를 포함한 모든 텍스트 내용을 반환합니다. 즉, HTML 태그를 포함한 모든 텍스트를 반환합니다. innerText와 달리, 모든 텍스트를 가져올 수 있습니다.
+      // - innerText: 요소의 텍스트 내용을 반환합니다. HTML 태그를 포함한 모든 텍스트를 제외하고 반환합니다. 따라서, 텍스트만 필요한 경우에 사용됩니다.
+      // - innerHTML: 요소의 HTML 콘텐츠를 반환합니다. HTML 태그, 속성, 이벤트 핸들러 등을 모두 포함한 HTML 콘텐츠를 반환합니다. 따라서, HTML 요소 자체를 조작해야 할 때 사용됩니다. 하지만 XSS(Cross-Site Scripting) 공격과 같은 보안 문제가 발생할 수 있으므로 주의해야 합니다.
+          // 
+      // 요약하자면, innerText는 HTML 태그를 제외한 텍스트만 필요한 경우에 사용하고, innerHTML은 HTML 요소 자체를 조작해야 할 때 사용하며, textContent는 HTML 태그를 포함한 모든 텍스트를 가져와야 할 때 사용합니다.
+      //     
+    </script>
+  </body>
+</html>
