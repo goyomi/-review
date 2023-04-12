@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+      // const birthYear = Number((prompt('태어난 연도를 입력하세요','19xx')))
+      // const x = birthYear % 12
+
+      // if (x === 0) {result = "원숭이"}
+      // else if (x === 1) {result = "닭"}
+      // else if (x === 2) {result = "개"}
+      // else if (x === 3) {result = "돼지"}
+      // else if (x === 4) {result = "쥐"}
+      // else if (x === 5) {result = "소"}
+      // else if (x === 6) {result = "호랑이"}
+      // else if (x === 7) {result = "토끼"}
+      // else if (x === 8) {result = "용"}
+      // else if (x === 9) {result = "뱀"}
+      // else if (x === 10) {result = "말"}
+      // else if (x === 11) {result = "양"}
+
+      // alert(`${birthYear}에 태어났다면 ${result}띠 입니다.`)
+      
+      // 짧게 만들기
+      // const y = '원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양'.split(',')
+      // const x = birthYear % 12
+
+      // alert(`${birthYear}에 태어났다면 ${y[x]}띠 입니다.`)
+
+      // if 조건문을 switch 조건문으로 변경하기 
+      // switch(birthYear % 12){
+      //   case 0:
+      //     alert('원숭이띠')
+      //     break
+      //   case 1:
+      //     alert('닭띠')
+      //     break
+      //   case 2:
+      //     alert('개띠')
+      //     break
+      //   case 3:
+      //     alert('돼지띠')
+      //     break
+      //   case 4:
+      //     alert('쥐띠')
+      //     break
+      //   case 5:
+      //     alert('소띠')
+      //     break
+      //   case 6:
+      //     alert('호랑이띠')
+      //     break
+      //   case 7:
+      //     alert('토끼띠')
+      //     break
+      //   case 8:
+      //     alert('용띠')
+      //     break
+      //   case 9:
+      //     alert('뱀띠')
+      //     break
+      //   case 10:
+      //     alert('말띠')
+      //     break
+      //   case 11:
+      //     alert('양띠')
+      //     break
+      // }
+
+      // 
+      const birthYear = Number((prompt('태어난 연도를 입력하세요','19xx')))
+      const x = birthYear % 12
+      const 간 = '신,유,술,해,자,축,인,묘,진,사,오,미'.split(',')
+      const y = birthYear % 10
+      const 지 = '경,신,임,계,갑,을,병,정'.split(',')
+      // 배열 내부 요소에 공백을 두면 출력값에도 영향을 미침
+      // 만약 공백을 두고 싶다면 split(', ')이렇게 표현하면됨 
+
+      alert(`${birthYear}년은 ${지[y]}${간[x]}년 입니다.`)
+
+    </script>
+
+  </body>
+</html>
