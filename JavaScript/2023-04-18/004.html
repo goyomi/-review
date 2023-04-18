@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <form action="">
+    <button type="submit" class="submit">제출</button>
+  </form>
+
+  <h1>나의 todo list</h1>
+  <p>1. 오늘 저녁에는 부대찌게를 끓여 먹겠다.<button type="button">삭제</button></p>
+  <p>2. 후식으로 슈팅스타를 먹겠다.<button type="button">삭제</button></p>
+  <p>3. 자기 전에 반드시 내일 아침 메뉴를 생각해두겠다.<button type="button">삭제</button></p>
+
+  <script>
+    // stopPropagation
+
+    const submit = document.querySelector('.submit');
+    submit.addEventListener('click', (event) => {
+      console.log('clicked');
+      event.preventDefault();
+      // event.stopPropagation();
+    });
+
+    document.body.addEventListener('click', () => {
+      console.log('event still alive!');
+    });
+    // body태그는 쿼리셀렉터로 찾지 않아도 됨
+    // 버블링이벤트
+
+    // 실습
+    // 1. P 태그를 클릭하면 p 태그의 컨텐츠를 출력하는 alert 창을 띄워주고
+    // 2. 삭제 버튼을 클릭하면 삭제할 것인지를 물어보는 confirm 창을 띄워주고, 확인을 누르면 P태그를 삭제합니다.
+
+    const txt = document.querySelectorAll('p');
+    const btn = document.querySelectorAll('button')
+
+    txt.addEventListener('click', (event) => {
+      alert(`${txt}`)
+    })
+    btn.addEventListener('click', (event) => {
+      if (confirm('버튼을 삭제하시겠습니까?')) {
+        알람창끄기
+      } else {
+        버튼삭제
+      }
+    })
+
+    // p.forEach(el => {
+    //   el.addEventListener('click', () => {
+    //     alert(el.textContent.slice(0, -2))
+    //   })
+    // })
+    // btn.forEach(el => {
+    //   el.addEventListener('click', (e) => {
+
+    //     if (confirm('삭제할검니가?')) {
+    //       el.parentElement.remove()
+    //       e.stopPropagation()
+    //     }
+    //   })
+    // })
+  </script>
+
+</body>
+
+</html>
