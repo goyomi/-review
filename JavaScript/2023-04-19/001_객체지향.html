@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체지향</title>
+</head>
+
+<body>
+  <script>
+    const me = {
+      name: '웨이드',
+      address: '제주도 제주시 인다 1길',
+      phoneNum: '010-8001-6536',
+      canWalk: function () {
+        console.log('웨이드가 걷는다.');
+      },
+      teaching: function (myStudent) {
+        myStudent.levelUp();
+      }
+    }
+
+    const student = {
+      level: 1,
+      levelUp: function () {
+        this.level++;
+      }
+    }
+
+    me.teaching(student);
+
+    // 실습
+    const goyomi = {
+      name: '고요미',
+      zone: '대구',
+      like: '컵픠',
+      love: '여행',
+      drinkCoffee: function () {
+        console.log('고요미가 커피를 마신다☕️')
+      },
+      travelWorld: function (numOfTravel) {
+        numOfTravel.add();
+      }
+    }
+    // 우리가 만든 객체는 한번 생성하면 끝이다. 같은 프로퍼티를 가지는 객체를 생성하기 위해서는 코드를 계속 반복하는 수 밖에 없다.
+
+    // 생성자: 객체를 만들 때 new 연산자와 함께 사용하는 함수이다. 
+    // let myArr = new Array(1, 2, 3);
+    // const now = new Date();
+    // 내장 생성자: 자바스크립트에 내장되어있음 
+
+    // 생성자를 사용하는 이유: 생성자를 통해 생성된 객체는 같은 프로퍼티와 메서드를 공유할 수 있다. 
+    let myArr = new Array(1, 2, 3);
+    let myArr2 = new Array(4, 5, 6);
+
+    myArr2.length
+    myArr.length
+
+    myArr.forEach(item => {
+      console.log(item);
+    })
+
+    myArr2.forEach(item => {
+      console.log(item);
+    })
+
+    // 사용자정의 타입 만들어보기: 우리만의 생성자 만들기, 원시타입과 참조타입처럼 사용자가 직접 만든 생성자를 통해 생성된 인스턴스를 말한다. 
+    // 생성자 함수는 암묵적으로 대문자로 시작하기로 약속이 되어있다. 
+    // function Factory(){}
+    // 생성자 함수를 통해 객체를 만들려면 new를 앞에 붙여주면 된다.
+    function Factory() { }
+    let result1 = Factory();
+    // undefined: 반환값이 없기 때문에
+    let result2 = new Factory();
+    // Factory {}: 자동으로 객체를 생성하고 반환한다. 반환되어 만들어진 객체를 인스턴스(instance)라고 한다. result2는 객체이다. 
+    // 생성자 함수와 객체의 관계는 instanceof 로 확인 할 수 있다.
+    result2 instanceof Factory
+    // result2 는 Factory의 인스턴스인가? Ture
+    // 실습
+    function NewFactory(name) {
+      this.name = name;
+      this.sayYourName = function () {
+        console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+      }
+    }
+    const robot = new NewFactory("미정봇");
+    const robot2 = new NewFactory("커피봇");
+    const robot3 = new NewFactory("워터봇");
+    // 원래 함수안에서의 this는 함수를 호출한 객체를 참조 하지만 생성자 함수 앞에 new 연산자가 사용되면 함수안의 this는 생성자가 만들어낸 객체 즉, 인스턴스(robot, robot2, robot3)를 참조한다. 
+    // 실습 2
+    function FoodPicker(randomFood){
+      this.food = randomFood;
+      this.pickMenu = function () {
+        console.log(`오늘의 추천 메뉴는 ${this.name[Math.floor(Math.random() * this.name.length)]}입니다.`)
+      }
+    }
+    // 생성자는 기본적으로 함수다 
+    // random 함수는 0~1미만 실수를 랜덤으로 뽑아낸다
+    // Math.floor로 정수로 만들어서 짜장면 뽑힐수 있게함 
+    //  * this.name.length 함으로서 뽑을 수 있는 숫자의 범위를 넓힘 0~ 2.99999까지 => 인덱스 2까지라서 (0,1,2)
+
+    const menu = new FoodPicker(['짜장면', '청국장', '김치찌게']);
+  </script>
+</body>
+
+</html>

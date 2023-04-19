@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>프로토타입</title>
+</head>
+
+<body>
+  <script>
+    // 우리는 손쉽게 객체를 생산할 수 있지만, 객체의 메서드를 등록 할때마다 새로운 함수를 생성하고 있습니다.
+    this.sayYourName = function () {
+      console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+    }
+    //바로 이 부분이 문제입니다. 우리는 100개의 객체를 생성할때마다 역시 100개의 함수를 새로 만들고 있는것 입니다. 새로 만든 객체의 메소드를 비교해보세요.
+    const robot1 = new NewFactory(1);
+    const robot2 = new NewFactory(2);
+
+    function NewFactory2(name) {
+      this.name = name;
+    }
+    // 이러한 자원의 낭비를 해결하기 위해 등장한 것이 바로 프로토타입입니다
+    NewFactory2.prototype.sayYourName = function () {
+      console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+    }
+
+    // 프로토타입이란: 특정 객체에 대한 참조이다. 어떤 공간을 가르키고 있다. 
+    // 프로토 타입에 접근하기 위해서는 __proto__를 사용해야 한다. 
+    // 주의 prototype !=== __proto__
+    // prototype 함수에 있고, __proto__ 인스턴스에 있음 
+    // new 키워드를 통해 생성자 함수의 prototype와 __proto__가 연결된다.
+  </script>
+</body>
+
+</html>

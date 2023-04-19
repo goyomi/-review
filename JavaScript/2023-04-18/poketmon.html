@@ -14,16 +14,67 @@
     <h2>포켓몬 캐러셀</h2>
     <ul class="list-item">
       <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/jammanbo.png" alt=""></li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt="">
-      </li>
-      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt="">
-      </li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/ev.png?raw=true" alt=""></li>
+      <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mazayoung.png?raw=true" alt=""></li>
       <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/mobugi.png" alt=""></li>
       <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/nyaong.png" alt=""></li>
       <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/pulin.png" alt=""></li>
       <li><img src="https://raw.githubusercontent.com/nugurejeil/sharingPhoto/main/weirdseed.png" alt=""></li>
     </ul>
   </article>
+
+  <script>
+
+    const arrPic = [
+      
+    ]
+    
+    const center = document.querySelector('.list-item');
+    const items = document.querySelectorAll('.list-item li');
+    const angle = 360 / items.length;
+    let currAngle = 0;
+
+    document.addEventListener('click', function (event) {
+      // 화면 오른쪽을 눌렀을 경우
+      console.log(event);
+      if (window.innerWidth / 2 < event.screenX) {
+        currAngle += angle;
+
+        // 화면 왼쪽을 눌렀을 경우
+      } else {
+        currAngle -= angle;
+      }
+      center.style.transform = `translate(-50%, -50%) rotateY(${currAngle}deg)`;
+    });
+    // clientX 사용자가 보고있는 뷰포트를 기준으로 작동
+    // screenX 사용자가 사용하는 모든 모니터를 기준으로 함 (모니터가 3개면 3개 다 포함)
+  </script>
+
+
+
+  <!-- <script>
+    document.querySelector('.list-item li:nth-child(1)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7))';
+    })
+    document.querySelector('.list-item li:nth-child(2)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7*2))';
+    })
+    document.querySelector('.list-item li:nth-child(3)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7*3))';
+    })    
+    document.querySelector('.list-item li:nth-child(4)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7*4))';
+    })    
+    document.querySelector('.list-item li:nth-child(5)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7*5))';
+    })
+    document.querySelector('.list-item li:nth-child(6)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(calc(360deg/7*6))';
+    })
+    document.querySelector('.list-item li:nth-child(7)').addEventListener('mouseenter', function () {
+      document.querySelector('.list-item').style.transform = 'rotateY(0)';
+    })
+  </script> -->
 </body>
 
 </html>
