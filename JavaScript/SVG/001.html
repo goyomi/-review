@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    path {
+      fill: none;
+      stroke: rgb(243, 41, 41);
+      stroke-width: 5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-dasharray: 2051 2051;
+      animation: line 10s infinite;
+      /* 선 길이간격(대쉬) */
+      /* stroke-dashoffset: 200; */
+      /* 어디서부터 선이 화면에 나올건지 결정 -> 움직이는것 처럼, 선이 그려지는것 처럼 보임 */
+    }
+    @keyframes line {
+      from{
+        stroke-dashoffset: 2051;
+      }to{
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <svg viewBox="0 0 1000 182" xmlns="http://www.w3.org/2000/svg">
+
+    <path
+      d="M7 137.125C7 137.125 150.6 175.425 292.3 175.425C434 175.425 537.1 161.025 573.5 85.225C626.6 -25.375 460.9 52.325 500.5 89.025C514 101.525 527.5 0.625014 471.7 6.22501C426 10.825 426.2 56.125 434.1 79.525C451.8 132.525 497.9 168.025 590 175.425C682.1 182.825 829.2 120.425 993.1 120.425" />
+
+    </svg> -->
+
+    <svg viewBox="0 0 880 155" xmlns="http://www.w3.org/2000/svg">
+      <path id="path1"
+        d="M0 92H118L131 64L151 135L172 1L191 153L209 71L218 92H295L272 71L262 45L283 33L302 45L323 33L337 45L328 71L313 92H417L431 64L458 135L502 1L511 153L526 114L549 153L571 71L587 92H681L664 71L655 45L671 33L688 45L710 33L724 45L716 71L710 92H880" />
+    </svg>
+
+    <script>
+      // 자바스크립트로 길이 구하기 
+      const path1 = document.getElementById('path1')
+      console.log(path1.getTotalLength())
+    </script>
+</body>
+
+</html>

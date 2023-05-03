@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팝업창 만들어보기</title>
+    <style>
+      /* reset */
+      p{
+        margin: 0;
+      }
+
+      .popup{
+        /* box-shadow: 0 0 10px red; */
+        width: 20vw;
+        height: 10vh;
+        border: solid 1px black;
+        box-sizing: border-box;
+        border-radius: 10px;
+      }
+      .check,
+      .close{
+        display: inline-block;
+        border-top: solid 1px black;
+        box-sizing: border-box;
+        width: 50%;
+        height: 20%;
+        padding: 10px;
+        text-align: center;
+      }
+      .check{
+        float: left;
+        border-right: solid 1px black;
+      }
+      .close{
+        float: right;
+      }
+      p{
+        padding: 10px;
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="popup">
+      <p>올바른 값을 입력해주세요</p>
+      <div class="check">확인</div>
+      <div class="close">닫기</div>
+    </div>
+
+  </body>
+</html>
