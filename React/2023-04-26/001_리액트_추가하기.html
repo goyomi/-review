@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>리액트 1분만에 추가해보기!</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script> 
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <!-- babel : 여러가지 프로그래밍 언어를 자바스크립트로 번역해주는 것 compiler -->
+  </head>
+  <body>
+
+    <h1>내 html에 리액트 1분만에 추가해보기!</h1>
+    <!-- 컴포넌트를 만드는 라이브러리  -->
+    <p>단 1분만에 설치없이 리액트를 추가할 수 있다구요?</p>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // 이렇게 적어야 바벨이 작동함 
+      const el = React.createElement;
+        // react 컴포넌트 정의하기
+
+        class HelloButton extends React.Component {
+          // extends : 상속받다, class형 컴포넌트 
+          constructor(props) {
+              super(props);
+
+              this.state = { liked: false };
+          }
+
+          render() {
+              if (this.state.liked) {
+                  return 'Hello World!';
+              }
+
+              return (
+                <button onClick={() => this.setState({ liked: true })}>
+                    Hello
+                </button>
+                // html처럼 보이지만 아님, 리액트의 문법(jsx => 자바스크립트의 확장)
+                // 여기서 말하는 this는 hello button
+            );
+          }
+        }
+
+        // DOM에 리액트 컴포넌트 랜더링하기
+        const domContainer = document.querySelector('#root');
+        ReactDOM.render(el(HelloButton), domContainer);
+        // hello 버튼 추가하기 
+    </script>
+  </body>
+</html>
