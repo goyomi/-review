@@ -10,6 +10,7 @@ function Time(props) {
   useEffect(()=>{
     // useEffect : 리액트에서 컴포넌트의 상태가 바뀌었을 때 실행해주는 것
     // state가 변경되었을 때 렌더링되어 실행되는 것 ! 
+    // 유즈이팩트는 함수 동작만하는애
     const Interval = setInterval(() => {
       const today = new Date();
       setToday(today);
@@ -21,6 +22,7 @@ function Time(props) {
       clearInterval(Interval);
     }
   }, [today])
+  // []안에 들어가는 값을 dependency 라고 부르는데 dependency 파라미터 값에 의존하여 useEffect 함수가 실행될지 말지를 결정. dependency의 값이 변경될 때 useEffect 실행됨
   return(
     <div>
       <h1>
