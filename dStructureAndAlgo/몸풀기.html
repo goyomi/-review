@@ -11,9 +11,13 @@
       let a = 'hello';
       let b = 'lions';
       let c;
-      c = a;
-      a = b;
-      b = c;
+      c = a; // lions
+      a = b; // hello
+      b = c; // hello
+
+      console.log(a)
+      console.log(b)
+      console.log(c)
 
       let a1 = 10;
       let b1 = 30;
@@ -22,9 +26,15 @@
       b1 = a1 - b1; // b1 10
       a1 = a1 - b1; // a1 30
 
+      console.log(a1)
+      console.log(b1)
+
       a = [a, b];
-      b = a[0];
-      a = a[1];
+      b = a[0]; // lions
+      a = a[1]; // hello
+
+      console.log(b)
+      console.log(a)
     </script>
   </body>
 </html>
