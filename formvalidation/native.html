@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input:required{
+      border: 3px solid green;
+    }
+    /* 올바르지 못한 입력을 받으면 적용되는 스타일 */
+    input:invalid{
+      border: 3px solid red;
+    }
+    input:valid{
+      border: 3px solid blue;
+    }
+    /* 섞어서 사용도 가능 */
+    input:required:invalid{
+      background-color: hotpink;
+    }
+  </style>
+</head>
+<body>
+  <!-- 폼 벨리데이션을 하지 않으면: 서버에 예상지 못한 데이터가 들어갈 수 있다 
+  프론트엔드단에서 벨리데이션을 제대로 작성해야 하는 이유: 사용자로 하여금 사용자가 문제를 해결하도록 유도할 수 있다 ==> 좋은 사용자 경험을 만들 수 있다. 그렇다고 모든 폼을 프론트엔드에서 해야하는 것은 아님
+  벨리데이션의 종류 
+  1. 네이티브 벨리데이션 : HTML의 유효성 검사 기능 ex) required, input type, min max length
+  다양한 경우의 벨리데이션은 힘듬, 커스터마이징이 힘듬
+  2. 자바스크립트 벨리데이션
+  벨리데이션 라이브러리가 엄청나게 많음 -->
+  <form action="">
+    <lable for="stuff">원하는 수량을 입력하세요 : </lable>
+    <input id="stuff" type="number" min="3" max="10">
+
+    <lable for="stuff2">이메일을 입력하세요 : </lable>
+    <input id="stuff2" type="email" required minlength="10" maxlength="20">
+    <button>제출</button>
+  </form>
+</body>
+</html>
